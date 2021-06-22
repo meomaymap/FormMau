@@ -5,12 +5,24 @@
 :root {
   /*font: calc(1.2vw + 1.2vh) sans-serif;*/
   --tyle1: 4;
+  --tyle2: 2;
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .Main {
+  
+  position: absolute ;
   width: 100%;
-  height: 98vh;
+  height: calc(100vh - 2*(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2));
+  top: calc(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2);
+  left: 0;
   border: 1px solid black; 
+  overflow-y: scroll;
+
    display: flex;
 	  align-items: flex-start; /*center	flex-end*/
   justify-content: center; 
@@ -60,7 +72,7 @@ text-align: left;		/*center*/
   overflow: hidden;
   text-overflow: ellipsis;
   
-  font: calc(2*1.2vw/var(--tyle1) + 2*1.2vh/var(--tyle1)) Arial, sans-serif;
+  font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
   
 }
 
@@ -71,3 +83,26 @@ text-align: left;		/*center*/
   clear: both;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
+  height: calc(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2);
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color:blue;
+  color: white;
+  text-align: center;
+  font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
+  height: calc(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2);
+}
