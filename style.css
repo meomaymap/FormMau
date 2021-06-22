@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /*font: calc(1.2vw + 1.2vh) sans-serif;*/
+  --tyle1: 4;
+}
+
+.Main {
+  width: 100%;
+  height: 98vh;
+  border: 1px solid black; 
+   display: flex;
+	  align-items: flex-start; /*center	flex-end*/
+  justify-content: center; 
+  
+}
+
+.Khung {
+   width: calc(100%/var(--tyle1));
+  margin: calc(0.5vw + 0.5vh);
+	text-align: center;
+    border: 0.01px solid;
+
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+	border: 0.01px solid;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+
+}
+
+.column2, .column3 {
+  float: left;  
+	border: 0.01px solid;
+	padding: 0 0.5% 0% 0.5%;
+
+    
+    display: flex;   
+    justify-content: center;
+	  align-items: center;
+}
+
+.column2 {
+    	  width: 50%;   
+        /*height: 100px;*/
+}
+.column3 {
+    	  width: 100%;
+}
+
+p {
+margin: 1px 1px 1px 1px;
+text-align: left;		/*center*/
+ white-space: nowrap; 	/*normal	nowrap*/
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  font: calc(2*1.2vw/var(--tyle1) + 2*1.2vh/var(--tyle1)) Arial, sans-serif;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
