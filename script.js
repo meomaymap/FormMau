@@ -20,9 +20,9 @@ function displayWindowSize() {
 
     var x1 = document.getElementsByClassName("header")[0].offsetWidth;
     var x2 = (h <= x1) ? "flex" :  "none";
-  if (i==2){
+
     root.style.setProperty('--display_Fuzzy', x2);
-  }
+
 }
 
 window.addEventListener('resize', function() {
