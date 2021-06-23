@@ -17,6 +17,7 @@ function displayWindowSize() {
           break;
       }
   }
+  alert(i);
   if (i==2){
 
     var x1 = document.getElementsByClassName("header")[0].offsetWidth;
