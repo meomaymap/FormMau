@@ -2,7 +2,9 @@ var DisplaySize = [[992, 576, 1],
                   [5000,991,575]];
 var tyle1 = [3.6,2.2,1.1];
 var tyle2 = [2.5,2,1];
-const root = document.querySelector(':root')
+const root = document.querySelector(':root');
+
+const h = window.innerHeight;
 
 displayWindowSize();
 
@@ -16,11 +18,10 @@ function displayWindowSize() {
   }
   
   var x1 = document.getElementsByClassName("header")[0].style.width;
-  var x2 = (window.innerHeight < x1) ? "flex" :  "none";
+  var x2 = (h < x1) ? "flex" :  "none";
   root.style.setProperty('--display_Fuzzy', x2);
 }
 
 window.addEventListener('resize', function() {
   displayWindowSize();
 }, true);
-
