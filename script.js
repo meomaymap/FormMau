@@ -14,12 +14,17 @@ function displayWindowSize() {
       if(window.innerWidth > DisplaySize[0][i] && window.innerWidth <= DisplaySize[1][i]) {
           root.style.setProperty('--tyle1', tyle1[i]);
           root.style.setProperty('--tyle2', tyle2[i]);
+          break;
       }
   }
   
-  var x1 = document.getElementsByClassName("header")[0].style.width;
-  var x2 = (h < x1) ? "flex" :  "none";
-  root.style.setProperty('--display_Fuzzy', x2);
+  if (i=2){
+    var x1 = document.getElementById("header").style.width;
+    alert(x1);
+    alert(h);
+    var x2 = (h < x1) ? "flex" :  "none";
+    root.style.setProperty('--display_Fuzzy', x2);
+  }
 }
 
 window.addEventListener('resize', function() {
