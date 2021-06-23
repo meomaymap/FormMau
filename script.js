@@ -19,9 +19,8 @@ function displayWindowSize() {
   }
   
   if (i=2){
-    var x1 = document.getElementById("header").style.width;
-    alert(x1);
-    alert(h);
+
+    var x1 = document.getElementsByClassName("header")[0].offsetWidth;
     var x2 = (h < x1) ? "flex" :  "none";
     root.style.setProperty('--display_Fuzzy', x2);
   }
