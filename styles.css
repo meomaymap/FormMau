@@ -6,7 +6,12 @@
   /*font: calc(1.2vw + 1.2vh) sans-serif;*/
   --tyle1: 4;
   --tyle2: 2;
+  --display_Fuzzy: none;  
+  --multi_row: 2;
+  
 }
+
+
 
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */
@@ -42,6 +47,7 @@ body {
   width: 50%;
 	border: 0.01px solid;
     padding: 0.5% 0.5% 0.5% 0.5%;
+    
 
 }
 
@@ -64,16 +70,35 @@ body {
     	  width: 100%;
 }
 
+
 p {
 margin: 1px 1px 1px 1px;
-text-align: left;		/*center*/
- white-space: nowrap; 	/*normal	nowrap*/
-
-  overflow: hidden;
-  text-overflow: ellipsis;
+text-align: left;		/*center  justify;  */ 
+ 
   
   font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
   
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  /* white-space: nowrap;  /*nowrap; 	/*normal	nowrap*/  /*Cho một dòng*/
+
+  display: -webkit-box; 
+      -webkit-line-clamp: var(--multi_row);  /*hiện 2 dòng rồi mới ...*/
+      -webkit-box-orient: vertical;
+
+}
+
+
+
+
+
+
+p1 {
+    display: -webkit-box;
+
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Clear floats after the columns */
@@ -82,6 +107,10 @@ text-align: left;		/*center*/
   display: table;
   clear: both;
 }
+.row {
+  display: flex;  /*dể cột cao bằng nhau*/
+}
+
 
 .footer {
   position: fixed;
@@ -93,6 +122,8 @@ text-align: left;		/*center*/
   text-align: center;
   font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
   height: calc(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2);
+
+  overflow-y: scroll;
 }
 
 .header {
@@ -105,4 +136,19 @@ text-align: left;		/*center*/
   text-align: center;
   font: calc(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1)) Arial, sans-serif;
   height: calc(3*(var(--tyle2)*1.2vw/var(--tyle1) + var(--tyle2)*1.2vh/var(--tyle1))/2);
+
+  overflow-y: scroll;
+}
+
+.Fuzzy {
+  position: absolute ;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: white;
+  display: var(--display_Fuzzy);
+	  align-items: center;
+  justify-content: center; 
+  
 }
