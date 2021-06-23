@@ -15,6 +15,9 @@ function displayWindowSize() {
       }
   }
   
+  var x1 = document.getElementsByClassName("header")[0].style.width;
+  var x2 = (window.innerHeight < x1) ? "flex" :  "none";
+  root.style.setProperty('--display_Fuzzy', x2);
 }
 
 window.addEventListener('resize', function() {
