@@ -17,8 +17,7 @@ function displayWindowSize() {
           break;
       }
   }
-  alert(i);
-  if (i=2){
+  if (i==2){
 
     var x1 = document.getElementsByClassName("header")[0].offsetWidth;
     var x2 = (h < x1) ? "flex" :  "none";
